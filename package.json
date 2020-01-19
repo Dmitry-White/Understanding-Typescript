@@ -1,0 +1,32 @@
+{
+  "name": "understanding-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dmitry-White/Understanding-Typescript.git"
+  },
+  "author": "Dmitry White",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dmitry-White/Understanding-Typescript/issues"
+  },
+  "homepage": "https://github.com/Dmitry-White/Understanding-Typescript#readme",
+  "dependencies": {
+    "typescript": "^3.7.5"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.16.0",
+    "@typescript-eslint/parser": "^2.16.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.0",
+    "prettier": "^1.19.1"
+  }
+}
