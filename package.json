@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
-    "start": "tsc && lite-server"
+    "start": "tsc && lite-server",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
