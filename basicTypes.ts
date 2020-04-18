@@ -22,19 +22,45 @@ hobbies = [];
 let address: [string, number] = ['Hello Drive', 42];
 address = ['Privet Drive', 4];
 
-// Type: enum
+// Type: Numeric Enum
 enum Colour {
   Gray,
   Green,
   Blue,
 }
-// Enum: Numeric value
-let myFirstColour: Colour = Colour.Blue;
-// Enum: Name of the numeric value
-let mySecondColour: string = Colour[1];
+// Reverse Mapping of Numeric Enum
+// Numeric value
+let myFirstColour: Colour = Colour.Blue; // 2
+// Name of the numeric value
+let mySecondColour: string = Colour[1]; // "Green"
+
+// Type: String Enum
+enum Direction {
+  Up = 'UP',
+  Down = 'DOWN',
+  Left = 'LEFT',
+  Right = 'RIGHT',
+}
+// No Reverse Mapping for String Enum
+// String value
+let myFirstDirection: Direction = Direction.Up; // "UP"
+// Name of the String value
+let mySecondDirection: string = Direction[1]; // undefined
 
 // Type: any
 let myCar: any = 'BMW';
 myCar = { model: 'BMW', series: 3 };
 
-console.info([myName, mySurname, myAge, hasHobbies, hobbies, address, myFirstColour, mySecondColour, myCar]);
+console.info([
+  myName,
+  mySurname,
+  myAge,
+  hasHobbies,
+  hobbies,
+  address,
+  myFirstColour,
+  mySecondColour,
+  myFirstDirection,
+  mySecondDirection,
+  myCar,
+]);

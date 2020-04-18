@@ -16,18 +16,44 @@ hobbies = [];
 // Type: tuple
 var address = ['Hello Drive', 42];
 address = ['Privet Drive', 4];
-// Type: enum
+// Type: Numeric Enum
 var Colour;
 (function (Colour) {
     Colour[Colour["Gray"] = 0] = "Gray";
     Colour[Colour["Green"] = 1] = "Green";
     Colour[Colour["Blue"] = 2] = "Blue";
 })(Colour || (Colour = {}));
-// Enum: Numeric value
-var myFirstColour = Colour.Blue;
-// Enum: Name of the numeric value
-var mySecondColour = Colour[1];
+// Reverse Mapping of Numeric Enum
+// Numeric value
+var myFirstColour = Colour.Blue; // 2
+// Name of the numeric value
+var mySecondColour = Colour[1]; // "Green"
+// Type: String Enum
+var Direction;
+(function (Direction) {
+    Direction["Up"] = "UP";
+    Direction["Down"] = "DOWN";
+    Direction["Left"] = "LEFT";
+    Direction["Right"] = "RIGHT";
+})(Direction || (Direction = {}));
+// No Reverse Mapping for String Enum
+// String value
+var myFirstDirection = Direction.Up; // "UP"
+// Name of the String value
+var mySecondDirection = Direction[1]; // undefined
 // Type: any
 var myCar = 'BMW';
 myCar = { model: 'BMW', series: 3 };
-console.info([myName, mySurname, myAge, hasHobbies, hobbies, address, myFirstColour, mySecondColour, myCar]);
+console.info([
+    myName,
+    mySurname,
+    myAge,
+    hasHobbies,
+    hobbies,
+    address,
+    myFirstColour,
+    mySecondColour,
+    myFirstDirection,
+    mySecondDirection,
+    myCar,
+]);
