@@ -22,4 +22,19 @@ hobbies = [];
 let address: [string, number] = ['Hello Drive', 42];
 address = ['Privet Drive', 4];
 
-console.info([myName, mySurname, myAge, hasHobbies, hobbies, address]);
+// Type: enum
+enum Colour {
+  Gray,
+  Green,
+  Blue,
+}
+// Enum: Numeric value
+let myFirstColour: Colour = Colour.Blue;
+// Enum: Name of the numeric value
+let mySecondColour: string = Colour[1];
+
+// Type: any
+let myCar: any = 'BMW';
+myCar = { model: 'BMW', series: 3 };
+
+console.info([myName, mySurname, myAge, hasHobbies, hobbies, address, myFirstColour, mySecondColour, myCar]);
