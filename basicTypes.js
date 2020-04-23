@@ -40,7 +40,7 @@ var Direction;
 // String value
 var myFirstDirection = Direction.Up; // "UP"
 // Name of the String value
-var mySecondDirection = Direction[1]; // undefined
+// let mySecondDirection: string = Direction[1]; // undefined or Error (noImplicitAny)
 // Type: any
 var myCar = 'BMW';
 myCar = { model: 'BMW', series: 3 };
@@ -63,6 +63,5 @@ console.info([
     myFirstColour,
     mySecondColour,
     myFirstDirection,
-    mySecondDirection,
     myCar,
 ]);

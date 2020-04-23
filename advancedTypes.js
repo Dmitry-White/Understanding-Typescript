@@ -13,13 +13,13 @@ var myData = {
 // Complex Object
 var complex = {
     data: [100, 3.99, 10],
-    output: function (all) {
+    output: function () {
         return this.data;
     },
 };
 var anotherComplex = {
     data: [100, 3.99, 10],
-    output: function (all) {
+    output: function () {
         return this.data;
     },
 };

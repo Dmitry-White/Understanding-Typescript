@@ -13,19 +13,19 @@ let myData: { name: string; age: number } = {
 // myData = { a: 1 } // Error!
 
 // Complex Object
-let complex: { data: number[]; output: (all: boolean) => number[] } = {
+let complex: { data: number[]; output: () => number[] } = {
   data: [100, 3.99, 10],
-  output: function(all: boolean): number[] {
+  output: function(): number[] {
     return this.data;
   },
 };
 // complex = {} // Error!
 
 // Type Alias
-type Complex = { data: number[]; output: (all: boolean) => number[] };
+type Complex = { data: number[]; output: () => number[] };
 let anotherComplex: Complex = {
   data: [100, 3.99, 10],
-  output: function(all: boolean): number[] {
+  output: function(): number[] {
     return this.data;
   },
 };

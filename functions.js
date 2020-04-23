@@ -23,3 +23,14 @@ function infiniteLoop() {
         console.log('Working!');
     }
 }
+// Strict Compiler Options
+// NoUnusedParameters & NoUnusedLocal
+function control(isTrue /*somethingElse: boolean */) {
+    var result;
+    // let total: number; // Error!
+    if (isTrue) {
+        result = 42;
+    }
+    result = 41;
+    return result;
+}

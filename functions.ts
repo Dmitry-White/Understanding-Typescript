@@ -27,3 +27,15 @@ function infiniteLoop(): never {
     console.log('Working!');
   }
 }
+
+// Strict Compiler Options
+// NoUnusedParameters & NoUnusedLocal
+function control(isTrue: boolean /*somethingElse: boolean */): number {
+  let result: number;
+  // let total: number; // Error!
+  if (isTrue) {
+    result = 42;
+  }
+  result = 41;
+  return result;
+}
