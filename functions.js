@@ -14,3 +14,12 @@ function multiply(value1, value2) {
 var myMultiply;
 myMultiply = multiply;
 // myMultiply = sayHello; // Error!
+// Type for Function: Never
+function error(message) {
+    throw new Error(message);
+}
+function infiniteLoop() {
+    while (true) {
+        console.log('Working!');
+    }
+}

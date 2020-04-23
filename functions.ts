@@ -17,3 +17,13 @@ function multiply(value1: number, value2: number): number {
 let myMultiply: (a: number, b: number) => number;
 myMultiply = multiply;
 // myMultiply = sayHello; // Error!
+
+// Type for Function: Never
+function error(message: string): never {
+  throw new Error(message);
+}
+function infiniteLoop(): never {
+  while (true) {
+    console.log('Working!');
+  }
+}
