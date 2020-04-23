@@ -51,6 +51,19 @@ let mySecondDirection: string = Direction[1]; // undefined
 let myCar: any = 'BMW';
 myCar = { model: 'BMW', series: 3 };
 
+// Type: null
+let canBeNull: number | null = 42;
+canBeNull = null;
+
+let canAlsoBeNull;
+canAlsoBeNull = null;
+
+let canOnlyBeNull: null;
+// canOnlyBeNull = 42; // Error!
+
+let cantBeNull: number = 42;
+// cantBeNull = null; // Error!
+
 console.info([
   myName,
   mySurname,
