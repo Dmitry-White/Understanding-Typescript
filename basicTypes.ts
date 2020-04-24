@@ -3,15 +3,15 @@ let myName = 'Dmitry';
 myName = 'Dima';
 
 // Type: string
-let mySurname: string = 'Beloichuk';
+let mySurname = 'Beloichuk';
 mySurname = 'White';
 
 // Type: number
-let myAge: number = 24;
+let myAge = 24;
 myAge = 25;
 
 // Type: boolean
-let hasHobbies: boolean = false;
+let hasHobbies = false;
 hasHobbies = true;
 
 // Type: array
@@ -61,7 +61,7 @@ canAlsoBeNull = null;
 let canOnlyBeNull: null;
 // canOnlyBeNull = 42; // Error!
 
-const cantBeNull: number = 42;
+const cantBeNull = 42;
 // cantBeNull = null; // Error!
 
 console.info([
