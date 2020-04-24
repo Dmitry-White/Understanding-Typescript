@@ -9,7 +9,8 @@
     "sourceMap": false,
     "noImplicitAny": true,
     "noUnusedParameters": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "outDir": "build"
   },
   "rules": {
     "quotemark": [true, "single", "avoid-escape"]

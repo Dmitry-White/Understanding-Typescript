@@ -5,7 +5,7 @@ let userData = {
 };
 // userData = {} // Error!
 
-// Type  for Object: Explicit
+// Type for Object: Explicit
 let myData: { name: string; age: number } = {
   name: 'Dmitry',
   age: 25,
