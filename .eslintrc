@@ -1,25 +1,18 @@
 {
+  "root": true,
   "parser": "@typescript-eslint/parser", // Specifies the ESLint parser
-  "extends": [
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended", // Uses the recommended rules from the @typescript-eslint/eslint-plugin
-    "prettier/@typescript-eslint",
-    "plugin:prettier/recommended"
+  "plugins": [
+    "@typescript-eslint"
   ],
   "parserOptions": {
-    "ecmaVersion": 2018, // Allows for the parsing of modern ECMAScript features
-    "sourceType": "module", // Allows for the use of imports
-    "ecmaFeatures": {
-      "jsx": true // Allows for the parsing of JSX
-    }
+    "project": "./tsconfig.json"
   },
-  "rules": {
-    // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
-    // e.g. "@typescript-eslint/explicit-function-return-type": "off",
-  },
-  "settings": {
-    "react": {
-      "version": "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
-    }
-  }
+  "extends": [
+    "airbnb-typescript/base",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ]
 }

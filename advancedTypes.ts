@@ -1,21 +1,21 @@
 // Type for Object: Inferred
-let userData = {
+const userData = {
   name: 'John',
   age: 24,
 };
 // userData = {} // Error!
 
 // Type for Object: Explicit
-let myData: { name: string; age: number } = {
+const myData: { name: string; age: number } = {
   name: 'Dmitry',
   age: 25,
 };
 // myData = { a: 1 } // Error!
 
 // Complex Object
-let complex: { data: number[]; output: () => number[] } = {
+const complex: { data: number[]; output: () => number[] } = {
   data: [100, 3.99, 10],
-  output: function(): number[] {
+  output(): number[] {
     return this.data;
   },
 };
@@ -23,9 +23,9 @@ let complex: { data: number[]; output: () => number[] } = {
 
 // Type Alias
 type Complex = { data: number[]; output: () => number[] };
-let anotherComplex: Complex = {
+const anotherComplex: Complex = {
   data: [100, 3.99, 10],
-  output: function(): number[] {
+  output(): number[] {
     return this.data;
   },
 };

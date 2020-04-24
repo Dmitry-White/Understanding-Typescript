@@ -30,7 +30,7 @@ function infiniteLoop(): never {
 
 // Strict Compiler Options
 // NoUnusedParameters & NoUnusedLocal
-function control(isTrue: boolean /*somethingElse: boolean */): number {
+function control(isTrue: boolean /* somethingElse: boolean */): number {
   let result: number;
   // let total: number; // Error!
   if (isTrue) {

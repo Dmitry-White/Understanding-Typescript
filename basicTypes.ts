@@ -30,9 +30,9 @@ enum Colour {
 }
 // Reverse Mapping of Numeric Enum
 // Numeric value
-let myFirstColour: Colour = Colour.Blue; // 2
+const myFirstColour: Colour = Colour.Blue; // 2
 // Name of the numeric value
-let mySecondColour: string = Colour[1]; // "Green"
+const mySecondColour: string = Colour[1]; // "Green"
 
 // Type: String Enum
 enum Direction {
@@ -43,7 +43,7 @@ enum Direction {
 }
 // No Reverse Mapping for String Enum
 // String value
-let myFirstDirection: Direction = Direction.Up; // "UP"
+const myFirstDirection: Direction = Direction.Up; // "UP"
 // Name of the String value
 // let mySecondDirection: string = Direction[1]; // undefined or Error (noImplicitAny)
 
@@ -61,7 +61,7 @@ canAlsoBeNull = null;
 let canOnlyBeNull: null;
 // canOnlyBeNull = 42; // Error!
 
-let cantBeNull: number = 42;
+const cantBeNull: number = 42;
 // cantBeNull = null; // Error!
 
 console.info([
