@@ -72,3 +72,15 @@ plant.species = 'AB';
 console.log('Before: ', plant.species);
 plant.species = 'Green Plant';
 console.log('After: ', plant.species);
+
+// Type for Class: static properties & methods
+class Helper {
+  static PI = 3.14;
+
+  static calcCircumference(diameter: number) {
+    return this.PI * diameter;
+  }
+}
+
+console.log('PI: ', Helper.PI);
+console.log('Circumference: ', Helper.calcCircumference(8));
