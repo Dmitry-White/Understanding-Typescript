@@ -84,3 +84,28 @@ class Helper {
 
 console.log('PI: ', Helper.PI);
 console.log('Circumference: ', Helper.calcCircumference(8));
+
+// Type for Class: abstract
+abstract class Project {
+  projectName = 'Default';
+
+  budget = 1000;
+
+  abstract changeName(name: string): void;
+
+  calcBudget() {
+    return this.budget * 2;
+  }
+}
+
+class ITProject extends Project {
+  changeName(name: string) {
+    this.projectName = name;
+  }
+}
+
+// const project = new Project(); // Cannot create an instance of an abstract class
+const itProject = new ITProject();
+console.log('IT Project before: ', itProject);
+itProject.changeName('Google');
+console.log('IT Project after: ', itProject);
