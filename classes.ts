@@ -48,3 +48,27 @@ console.log('Dmitry: ', dmitry);
 // Type for Class: public vs protected properties
 console.log('Username: ', dmitry.username);
 // console.log(dmitry.age); // Won't work with private properties
+
+// Type for Class: getters & setters
+class Plant {
+  private speciesName = 'Default';
+
+  get species() {
+    return this.speciesName;
+  }
+
+  set species(value: string) {
+    if (value.length > 3) {
+      this.speciesName = value;
+    } else {
+      this.speciesName = 'Default';
+    }
+  }
+}
+
+const plant = new Plant();
+console.log('Initial: ', plant.species);
+plant.species = 'AB';
+console.log('Before: ', plant.species);
+plant.species = 'Green Plant';
+console.log('After: ', plant.species);
