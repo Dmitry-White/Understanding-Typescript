@@ -109,3 +109,29 @@ const itProject = new ITProject();
 console.log('IT Project before: ', itProject);
 itProject.changeName('Google');
 console.log('IT Project after: ', itProject);
+
+// Type for Class: private constructor & readonly properties
+class OnlyOne {
+  private static instance: OnlyOne;
+
+  public readonly name: string;
+
+  private constructor(name: string) {
+    this.name = name;
+  }
+
+  static getInstance(name: string) {
+    if (!OnlyOne.instance) {
+      OnlyOne.instance = new OnlyOne(name);
+    }
+    return OnlyOne.instance;
+  }
+}
+
+// const wrong = new OnlyOne('The Only One'); // Constructor is private
+const first = OnlyOne.getInstance('Singleton 1');
+console.log('Singleton 1: ', first);
+const second = OnlyOne.getInstance('Singleton 2');
+console.log('Singleton 2: ', second);
+
+// second.name = 'Singleton'; / Property is readonly
