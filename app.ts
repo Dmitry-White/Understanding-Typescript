@@ -2,8 +2,14 @@
 /// <reference path="circleNamespace.ts" />
 /// <reference path="rectangleNamespace.ts" />
 
+import { calculateCircumference } from './modules/circle';
+import { calculateRectangle } from './modules/rectangle';
+
 import CircleNamespace = MyMath.Circle;
 
-console.log('Hii!');
-console.log(MyMath.calculateRectangle(10, 20));
-console.log(CircleNamespace.calculateCircumference(3));
+console.log('App: Hi!');
+console.log('Namespace MyMath: ', MyMath.calculateRectangle(10, 20));
+console.log('Namespace MyMath.Circle: ', CircleNamespace.calculateCircumference(3));
+
+console.log('Module Circle: ', calculateRectangle(10, 20));
+console.log('Module Rectangle: ', calculateCircumference(3));

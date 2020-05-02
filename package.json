@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Dmitry-White/Understanding-Typescript#readme",
   "dependencies": {
+    "systemjs": "^6.8.2",
     "typescript": "^3.7.5"
   },
   "devDependencies": {

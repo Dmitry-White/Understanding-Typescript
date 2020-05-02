@@ -8,7 +8,19 @@
 </head>
 
 <body>
-  <script src="build/app.js"></script>
+  <!-- Doesn't really work :( -->
+  <script src="node_modules/systemjs/dist/system.js">
+    System.config({
+      baseURL: '/build',
+      packages: {
+        '/build': {
+          defaultExtension: 'js'
+        }
+      }
+    });
+    System.import("app.js")
+  </script>
+  <!-- <script src="build/app.js"></script> -->
   <script src="build/basicTypes.js"></script>
   <script src="build/functions.js"></script>
   <script src="build/advancedTypes.js"></script>
