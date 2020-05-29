@@ -1,3 +1,4 @@
+// Interfaces in General
 interface NamedPerson {
   firstName: string;
   age?: number;
@@ -12,6 +13,8 @@ function greet(person: NamedPerson) {
 function changeName(person: NamedPerson) {
   person.firstName = 'Viktoria';
 }
+
+// Interfaces for Objects
 
 // Event if "age" is not present in NamedPerson interface
 // (even in age? format or "[key: string]: any" format),
@@ -30,3 +33,19 @@ greet(personData);
 changeName(personData);
 greet(personData);
 personData.greet('White');
+
+// Interfaces for Classes
+
+// Class could contain additional methods and properties
+// not present in the interface
+class PersonClass implements NamedPerson {
+  firstName: string;
+  greet(lastName: string): void {
+    console.log(`Interfaces: Hi, I am ${this.firstName} ${lastName}`);
+  }
+}
+
+const myPerson = new PersonClass();
+myPerson.firstName = 'Dima';
+greet(myPerson);
+myPerson.greet('The Great');
