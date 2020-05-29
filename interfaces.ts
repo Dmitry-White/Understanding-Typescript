@@ -49,3 +49,15 @@ const myPerson = new PersonClass();
 myPerson.firstName = 'Dima';
 greet(myPerson);
 myPerson.greet('The Great');
+
+// Interfaces for Function Types
+
+interface DoubleValueFunc {
+  (number1: number, number2: number): number;
+}
+
+const doubleFunc: DoubleValueFunc = function(value1, value2) {
+  return (value1 + value2) * 2;
+};
+
+console.log('Interfaces for function type:', doubleFunc(10, 20));
