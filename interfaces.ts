@@ -61,3 +61,25 @@ const doubleFunc: DoubleValueFunc = function(value1, value2) {
 };
 
 console.log('Interfaces for function type:', doubleFunc(10, 20));
+
+// Interfaces for Array Types
+
+interface NumList {
+  [index: number]: number;
+}
+
+const numArr: NumList = [1, 2, 3];
+
+// numArr.push(1) // no "push" method in NumList
+
+// Instead use Array<...> to have all the Array methods and properties
+
+type NumItem = number;
+interface NumItems extends Array<NumItem> {}
+// type NumItems = NumItem[];
+
+const arr: NumItems = [1, 2, 3];
+
+arr.push(4);
+
+console.log('Interfaces for array type:', { numArr, arr });
