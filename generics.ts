@@ -15,3 +15,9 @@ function betterEcho<T>(data: T) {
 console.log(betterEcho('Dmitry'));
 console.log(betterEcho<number>(25));
 console.log(betterEcho({ name: 'Dmitry', age: 25 }));
+
+// Built-in Generics
+const testResults: Array<number> = [1.54, 2.33];
+testResults.push(-2.99);
+
+console.log('Generics: ', testResults);
