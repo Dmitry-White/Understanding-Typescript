@@ -40,6 +40,7 @@ personData.greet('White');
 // not present in the interface
 class PersonClass implements NamedPerson {
   firstName: string;
+
   greet(lastName: string): void {
     console.log(`Interfaces: Hi, I am ${this.firstName} ${lastName}`);
   }
@@ -75,11 +76,27 @@ const numArr: NumList = [1, 2, 3];
 // Instead use Array<...> to have all the Array methods and properties
 
 type NumItem = number;
-interface NumItems extends Array<NumItem> {}
-// type NumItems = NumItem[];
+// interface NumItems extends Array<NumItem> {}
+type NumItems = NumItem[];
 
 const arr: NumItems = [1, 2, 3];
 
 arr.push(4);
 
 console.log('Interfaces for array type:', { numArr, arr });
+
+// Interface Inheritance
+
+interface AgedPerson extends NamedPerson {
+  age: number;
+}
+
+const agedPerson: AgedPerson = {
+  age: 50,
+  firstName: 'Ivan',
+  greet(lastName) {
+    console.log(`Hello for ${lastName}`);
+  },
+};
+
+console.log('Intefaces inheritance: ', agedPerson);
