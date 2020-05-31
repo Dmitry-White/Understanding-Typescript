@@ -21,3 +21,10 @@ const testResults: Array<number> = [1.54, 2.33];
 testResults.push(-2.99);
 
 console.log('Generics: ', testResults);
+
+// Array Generics
+function printAll<T>(args: T[]) {
+  args.forEach(element => console.log(element));
+}
+
+printAll<string>(['Apple', 'Banana']);
