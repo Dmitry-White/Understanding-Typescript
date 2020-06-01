@@ -28,3 +28,12 @@ function printAll<T>(args: T[]) {
 }
 
 printAll<string>(['Apple', 'Banana']);
+
+// Generic Types
+type EchoFunc = <T>(data: T) => T;
+
+const echo2: EchoFunc = betterEcho;
+// Generic type EchoFunc prevents assignment of differently typed functions
+// const echo3: EchoFunc = printAll;
+
+console.log(echo2<number>(2));
