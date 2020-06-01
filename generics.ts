@@ -39,7 +39,7 @@ const echo2: EchoFunc = betterEcho;
 console.log(echo2<number>(2));
 
 // Generic Class
-class SimpleMath<T> {
+class SimpleMath<T extends number | string> {
   baseValue: T;
   multiplyValue: T;
   calculate(): number {
@@ -49,7 +49,8 @@ class SimpleMath<T> {
 
 const simpleMath = new SimpleMath();
 simpleMath.baseValue = 10;
-// simpleMath.baseValue = 'something';
+// simpleMath.baseValue = 'something'; // OK, but the result is NaN
+// simpleMath.baseValue = false; // Compilation Error
 simpleMath.multiplyValue = 20;
 
 console.log('Generic Class: ', simpleMath.calculate());
