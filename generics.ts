@@ -37,3 +37,19 @@ const echo2: EchoFunc = betterEcho;
 // const echo3: EchoFunc = printAll;
 
 console.log(echo2<number>(2));
+
+// Generic Class
+class SimpleMath<T> {
+  baseValue: T;
+  multiplyValue: T;
+  calculate(): number {
+    return +this.baseValue * +this.multiplyValue;
+  }
+}
+
+const simpleMath = new SimpleMath();
+simpleMath.baseValue = 10;
+// simpleMath.baseValue = 'something';
+simpleMath.multiplyValue = 20;
+
+console.log('Generic Class: ', simpleMath.calculate());
