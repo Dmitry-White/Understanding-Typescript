@@ -10,7 +10,8 @@
     "noImplicitAny": true,
     "noUnusedParameters": true,
     "noUnusedLocals": true,
-    "outDir": "build"
+    "outDir": "build",
+    "experimentalDecorators": true
   },
   "rules": {
     "quotemark": [true, "single", "avoid-escape"]
