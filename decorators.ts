@@ -21,13 +21,13 @@ class Car {}
 function printable(constructorFn: Function) {
   constructorFn.prototype.print = function() {
     console.log('Decorators: ', this);
-  }
+  };
 }
 
 @logging(true)
 @printable
 class SmallPlant {
-  name = 'Green Plant'
+  name = 'Green Plant';
 }
 
 const smallPlant = new SmallPlant();
