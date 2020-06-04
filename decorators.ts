@@ -41,8 +41,20 @@ function editable(flag: boolean): MethodDecorator {
   };
 }
 
+// Property Decorator
+function overwritable(flag: boolean): PropertyDecorator {
+  return function(target, propName) {
+    console.log(`Making ${String(propName)} of ${String(target)} overwritable: ${flag}`);
+    const newDescriptor: PropertyDescriptor = {
+      writable: flag,
+    };
+    return newDescriptor;
+  };
+}
+
 class SimpleProject {
-  projectName: string;
+  @overwritable(false)
+  projectName = 'Default';
 
   constructor(name: string) {
     this.projectName = name;
@@ -62,3 +74,6 @@ simpleProject.calcBudget = function() {
   console.log(2000);
 };
 simpleProject.calcBudget();
+// If overwritable descriptor is set to "false",
+// than even the constructor call would not be able to set a new value
+console.log('Property Descriptor: ', simpleProject.projectName);
